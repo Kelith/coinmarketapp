@@ -1,17 +1,29 @@
 import React from 'react'
-import { Switch, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import { Layout, Typography, Space } from 'antd'
 
-import {Navbar} from './components'
+import { Navbar, Homepage, Exchanges, Cryptocurrencies, CryptoDetails, News} from './components'
+import './App.css'
+import 'antd/dist/antd.css'
 
 const App = () => {
   return (
     <div className="app">
       <div className="navbar">
-
+        <Navbar />
       </div>
       <div className="main">
-        
+        <Layout>
+          <div className="routes">
+            <Routes>
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/exchanges" component={Exchanges} />
+              <Route exact path="/cryptocurrencies" component={Cryptocurrencies} />
+              <Route exact path="/crypto/:coinId" component={CryptoDetails} />
+              <Route exact path="/news" component={News} />
+            </Routes>
+          </div>
+        </Layout>  
       </div>
       <div className="footer">
         
