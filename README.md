@@ -1,2 +1,2 @@
 # coinmarketapp
-Cryptocurrencies charts, exchanges and news
+Cryptocurrencies charts and news
